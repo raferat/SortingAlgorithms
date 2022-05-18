@@ -23,17 +23,24 @@ public class Main
     SortingAlgorithm<Integer> stooge   = new StoogeSort   <>(Integer::compare);
     SortingAlgorithm<Integer> patience = new PatienceSort <>(Integer::compare);
     SortingAlgorithm<Integer> quick    = new QuickSort    <>(Integer::compare,(List<Integer> l) -> l.get(l.size()/2));
+    SortingAlgorithm<Integer> insert   = new InsertSort   <>(Integer::compare);
+    SortingAlgorithm<Integer> shaker   = new CoctailShakerSort <>(Integer::compare);
+    
+    
+    SortingAlgorithm<Integer> counting = new CountingSort   (0,10000);
+    
     
     //SortingAlgorithm<Integer> sleep = new SleepSort();
-    
-    Main.<Integer>timeSortingAlgorithm(shell,bigdata,"Shell",false);
+    //Main.<Integer>timeSortingAlgorithm(shell,bigdata,"Shell",false);
     //Main.<Integer>timeSortingAlgorithm(bubble,bigdata,"Bubble",false);
-    Main.<Integer>timeSortingAlgorithm(flash,bigdata,"Flash",false);
+    //Main.<Integer>timeSortingAlgorithm(flash,bigdata,"Flash",false);
     //Main.<Integer>timeSortingAlgorithm(oddEven,bigdata,"Odd Even",false);
     //Main.<Integer>timeSortingAlgorithm(stooge,bigdata,"Stooge",false);
-    Main.<Integer>timeSortingAlgorithm(patience,bigdata,"Patience",false);
-    Main.<Integer>timeSortingAlgorithm(quick,bigdata,"Quick",false);
-    
+    //Main.<Integer>timeSortingAlgorithm(patience,bigdata,"Patience",false);
+    //Main.<Integer>timeSortingAlgorithm(quick,bigdata,"Quick",false);
+    Main.<Integer>timeSortingAlgorithm(insert,smalldata,"Insert",true);
+    //Main.<Integer>timeSortingAlgorithm(shaker,bigdata,"Shaker",false);
+    //Main.<Integer>timeSortingAlgorithm(counting, bigdata, "Counting" , false);
     //Main.<Integer>timeSortingAlgorithm(sleep,bigdata,"Sleep",true);
   }
   

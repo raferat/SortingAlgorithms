@@ -11,6 +11,7 @@ public class BubbleSort<E> extends SortingAlgorithm<E>
   {
     sorted = toSort.clone();
     
+    
     int cycles = 0;
     
     do
